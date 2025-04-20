@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 122 39% 40%;
+    --primary-foreground: 120 100% 98%;
+
+    --secondary: 122 61% 49%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 36 100% 50%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 122 39% 40%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 122 39% 40%;
+    --primary-foreground: 120 100% 98%;
+
+    --secondary: 122 61% 49%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 36 100% 50%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 122 39% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-kirana-primary hover:bg-kirana-dark text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-kirana-accent hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 hover:text-kirana-primary transition-colors duration-200;
+  }
+}
